@@ -41,8 +41,6 @@ p, h2, h3,table, ul {
     border-radius: 7px;
 }
 
-
-
 table {
     border-collapse: collapse; /* Quita el espacio entre bordes */
     width: 100%;
@@ -57,7 +55,6 @@ th {
     border: 1px solid #bbb;
     text-align: center;
 }
-
 
 .section{
     display: none;
