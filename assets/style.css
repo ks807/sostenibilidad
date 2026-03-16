@@ -1,0 +1,75 @@
+
+*{
+    margin: 0;
+}
+body{
+    background-color: #e9edc9c5;
+}
+
+#selector{
+    background-color: hsl(75, 10%, 40%);
+    margin-bottom: 10px;
+    height: 10vh;
+    color: #FEFAE0;
+    justify-content: space-between;
+    align-items: center;
+    display: flex;
+    margin: auto;
+    height: 60px;
+}
+
+label{
+    max-height: 1000px;
+    color: #FEFAE0;
+
+}
+
+h1{
+    max-width: 50vw;
+    margin: auto;
+}
+p, h2, h3,table{
+    max-width: 75vw;
+    margin: auto;
+    padding: 7px;
+}
+
+.box{
+    background-color: #DDBEA9;
+    max-width: 80vw;
+    margin: auto;
+    border-radius: 7px;
+}
+
+
+
+table {
+    border-collapse: collapse; /* Quita el espacio entre bordes */
+    width: 100%;
+    font-family: sans-serif;
+    border: 2px solid #ccc;
+}
+
+th {
+    background-color: #e2e2e2; /* Gris típico de Excel */
+    color: #333;
+    padding: 10px;
+    border: 1px solid #bbb;
+    text-align: center;
+}
+
+
+.section{
+    display: none;
+}
+
+#part-1{
+    display: block;
+}
+img{
+    max-width: 100%;
+}
+.img1{
+    background-image: url(/assets/media/aero-white.webp);
+    height: 20em;
+}
