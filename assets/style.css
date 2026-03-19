@@ -1,4 +1,6 @@
 :root {
+    --bg: white;
+    --fg: black;
     --accent: #6b705c;
     --sidebar-size: 15em;
 }
@@ -6,6 +8,8 @@
 body {
     margin: 0;
     font-family: sans-serif;
+    color: var(--fg);
+    background-color: var(--bg);
 }
 
 p {
@@ -34,10 +38,6 @@ nav {
         text-decoration: none;
         color: white;
         display: block;
-    }
-
-    img {
-        filter: invert(1);
     }
 }
 
@@ -70,14 +70,6 @@ th {
     text-align: center;
 }
 
-img {
-    max-width: 80%;
-    margin: 0;
-    display: block;
-    margin: auto auto;
-    padding: 2em;
-}
-
 hr {
     border: none;
     border-bottom: 3px dotted var(--accent);
@@ -86,6 +78,60 @@ hr {
 
 b {
     color: var(--accent);
+}
+
+#microslop, #logo {
+    max-width: 80%;
+    margin: 0;
+    display: block;
+    margin: auto auto;
+    padding: 2em;
+}
+
+#logo {
+    width: 5em !important;
+}
+
+.ODS {
+    display: flex;
+
+    img {
+        flex: 1;
+        width: 20%;
+        height: auto;
+        cursor: pointer;
+    }
+
+    div {
+        flex: none;
+        display: block;
+    }
+}
+
+.ODS-desc {
+    padding: 2em;
+    display: none;
+    text-align: center;
+
+    &.ODS4 {
+        background-color: #c71427;
+        color: white;
+    }
+
+    &.ODS7 {
+        background-color: #fdc400;
+        color: black;
+    }
+
+    &.ODS9 {
+        background-color: #ff690c;
+        color: black;
+    }
+
+    &.ODS13 {
+        background-color: #3d7f41;
+        color: white;
+    }
 }
 
 .section {
