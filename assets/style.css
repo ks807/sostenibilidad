@@ -29,9 +29,9 @@ p {
 }
 
 main {
-    max-width: 40em;
+    max-width: 45em;
     margin: 0 auto;
-    padding: 2em;
+    padding: 1em;
     padding-left: var(--sidebar-size);
 }
 
@@ -77,18 +77,27 @@ dd {
 }
 
 table {
-    border-collapse: collapse;
     width: 100%;
-    font-family: sans-serif;
-    border: 2px solid #ccc;
-}
+    border: none;
+    border-spacing: 0.5em;
 
-th {
-    background-color: #e2e2e2;
-    color: #333;
-    padding: 10px;
-    border: 1px solid #bbb;
-    text-align: center;
+    th, td {
+        text-align: center;
+        padding: 0.5em;
+
+        ul {
+            text-align: left;
+        }
+    }
+
+    th {
+        color: var(--accent)
+    }
+
+    td {
+        background-color: var(--accent);
+        color: var(--bg);
+    }
 }
 
 hr {
@@ -164,11 +173,6 @@ ul {
       content: '✓';
       margin: 1em;
     }
-
-    li:hover {
-        margin-left: 0.5em;
-        transition: 100ms;
-    }
 }
 
 #microslop, #logo {
@@ -234,6 +238,7 @@ ul {
 
 .info {
     display: flex;
+    justify-content: center;
 
     span {
         display: table;
@@ -246,9 +251,17 @@ ul {
         text-align: center;
         color: var(--bg);
     }
+
+    .arrow {
+        align-content: center;
+        color: var(--accent);
+        font-size: 150%;
+        font-weight: bold;
+        user-select: none;
+    }
 }
 
-#spin {
+.spin {
     display: inline-block;
     animation: spin 5s linear infinite;
 }
