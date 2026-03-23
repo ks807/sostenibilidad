@@ -1,7 +1,8 @@
 function changeSection(section) {
     for (let sec of document.getElementsByClassName("section"))
         sec.style.display = "none";
-    document.getElementById(section.id.replace("a-", "")).style.display = "block";
+    document.getElementById(section.replace("a-", "")).style.display = "block";
+    localStorage.setItem("page", section);
 }
 
 function changeODS(ods) {
@@ -9,4 +10,10 @@ function changeODS(ods) {
         sec.style.display = "none";
     for (let sec of document.getElementsByClassName(ods))
         sec.style.display = "block";
+    localStorage.setItem("ods", ods);
 }
+
+changeSection(localStorage.getItem("page") || "part-1");
+changeODS(localStorage.getItem("ods") || "ODS4");
+document.getElementById("dark").checked = localStorage.getItem('theme') === 'true' || false;
+

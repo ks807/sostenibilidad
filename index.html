@@ -10,19 +10,27 @@
     <body>
         <nav>
             <img src="/assets/media/icon.png" id="logo" />
-            <a href="#" id="a-part-1" onclick="changeSection(this)">Inici</a>
-            <a href="#" id="a-part-2" onclick="changeSection(this)">Impacte</a>
-            <a href="#" id="a-part-3" onclick="changeSection(this)">Economia Circular</a>
-            <a href="#" id="a-part-4" onclick="changeSection(this)">El meu Perfi</a>
-            <a href="#" id="a-part-5" onclick="changeSection(this)">Pla de Sostenibilitat</a>
+            <a href="#" id="a-part-1" onclick="changeSection(this.id)">Inici</a>
+            <a href="#" id="a-part-2" onclick="changeSection(this.id)">Impacte</a>
+            <a href="#" id="a-part-3" onclick="changeSection(this.id)">Economia Circular</a>
+            <a href="#" id="a-part-4" onclick="changeSection(this.id)">El meu Perfi</a>
+            <a href="#" id="a-part-5" onclick="changeSection(this.id)">Pla de Sostenibilitat</a>
+
+            <label>
+                <input id="dark" type="checkbox" name="theme"
+                    onclick="localStorage.setItem('theme', this.checked)">
+                <span id="slider"></span>
+            </label>
         </nav>
+        <script>
+        </script>
         <main>
             <div id="part-1" class="section">
                 <img src="/assets/media/microslop.svg" id="microslop" />
                 <h3>Un treball de sostenibilitat :3</h3>
                 <hr />
                 <p>
-                    Microsoft és una empresa multinacional tecnològica fundada el 1975 per Bill Gates i Paul Allen.
+                    <b>Microsoft</b> és una empresa multinacional tecnològica fundada el 1975 per Bill Gates i Paul Allen.
                     Actualment és una de les empreses més influents del món en programari, serveis al núvol i
                     intel·ligència artificial.
                 </p>
@@ -41,8 +49,8 @@
                 <hr />
                 <h2>Definició del Concepte de Sostenibilitat</h2>
                 <p>
-                    Per a Microsoft, sostenibilitat significa reduir l’impacte ambiental dels seus centres de dades,
-                    garantir pràctiques laborals ètiques i mantenir alts estàndards de transparència i govern corporatiu
+                    Per a Microsoft, <b>sostenibilitat</b> significa <i>reduir l’impacte ambiental dels seus centres de dades,
+                    garantir pràctiques laborals ètiques i mantenir alts estàndards de transparència i govern corporatiu.</i>
                 </p>
                 <hr />
                 <h2>Marcos Internacionals</h2>
@@ -54,22 +62,36 @@
                 </p>
                 <hr />
                 <h2>Ambientals, Socials i de Governança</h2>
-                <p>
-                    Ambientals: Microsoft gestiona el consum energètic dels seus centres de dades, controla les
-                    emissions de CO₂, té el compromís de ser “carbon negative” el 2030, gestiona de manera eficient
-                    l’aigua i l’economia circular en el hardware.
-                </p>
-                <p>
-                    Socials: L’empresa promou la diversitat i inclusió, garanteix l’accessibilitat digital, protegeix la
-                    privacitat i les dades dels usuaris i ofereix formació digital global.
-                </p>
-                <p>
-                    Governança: Microsoft manté un codi ètic estricte, assegura la transparència financera, compleix la
-                    normativa internacional i supervisa les seves operacions mitjançant un consell d’administració
-                    actiu.
-                </p>
+                <div class="info">
+                    <span>
+                        <h3>Ambientals</h3>
+                        <p>
+                            Microsoft gestiona el consum energètic dels seus centres de dades, controla les
+                            emissions de CO₂, té el compromís de ser “carbon negative” el 2030, gestiona de manera eficient
+                            l’aigua i l’economia circular en el hardware.
+                        </p>
+                    </span>
+                    <span>
+                        <h3>Socials</h3>
+                        <p>
+                            L’empresa promou la diversitat i inclusió, garanteix l’accessibilitat digital, protegeix la
+                            privacitat i les dades dels usuaris i ofereix formació digital global.
+                        </p>
+                    </span>
+                </div>
+                <div class="info">
+                    <span>
+                        <h3>Governança</h3>
+                        <p>
+                            Microsoft manté un codi ètic estricte, assegura la transparència financera, compleix la
+                            normativa internacional i supervisa les seves operacions mitjançant un consell d’administració
+                            actiu.
+                        </p>
+                    </span>
+                </div>
                 <hr />
                 <h2>ODS</h2>
+                <p><center>Clica en l'ODS per saber més!</center></p>
                 <span class="ODS">
                     <img src="/assets/media/ODS4.png" onclick="changeODS('ODS4')">
                     <img src="/assets/media/ODS7.png" onclick="changeODS('ODS7')">
@@ -147,6 +169,7 @@
             </div>
             <div id="part-3" class="section">
                 <h1>Aplicació professional i personal</h1>
+                <hr />
                 <h2>ODS més rellevants per al perfil professional</h2>
                 <p>
                     En l’àmbit de la informàtica i el desenvolupament tecnològic, alguns dels Objectius de
@@ -161,36 +184,45 @@
                     Promou l’accés universal a la formació i a les competències
                     digitals. Els professionals tecnològics desenvolupen plataformes educatives, aplicacions
                     d’aprenentatge i eines digitals per facilitar l’educació.
-               </div>
+                </div>
                 <div class="ODS-desc ODS9">
                     Impulsa la creació d’infraestructures
                     tecnològiques modernes i sostenibles que permeten el desenvolupament de serveis digitals, cloud
                     computing i intel·ligència artificial.
-               </div>
+                </div>
                 <div class="ODS-desc ODS13">
                     Està relacionat amb la necessitat de reduir l’impacte ambiental de
                     la tecnologia mitjançant l’ús d’energies renovables i l’optimització de recursos digitals.
-               </div>
-                </p>
+                </div>
+                <hr />
                 <h2>Riscos i oportunitats</h2>
-                <p>
-                    <b>Riscos:</b> un dels principals riscos és l’augment del consum energètic dels centres de dades,
-                    que pot generar un impacte ambiental elevat si no es gestionen correctament els recursos
-                    tecnològics.
-                </p>
-                <p>
-                    <b>Oportunitats:</b> el desenvolupament de tecnologies més eficients energèticament, la creació de
-                    plataformes educatives digitals i la innovació en intel·ligència artificial per optimitzar
-                    processos.
-                </p>
+                <div class="info">
+                    <span>
+                        <h3>Riscos</h3>
+                        <p>
+                            Un dels principals riscos és l’augment del consum energètic dels centres de dades,
+                            que pot generar un impacte ambiental elevat si no es gestionen correctament els recursos
+                            tecnològics.
+                        </p>
+                    </span>
+                    <span>
+                        <h3>Oportunitats</h3>
+                        <p>
+                            Entre les oportunitats es compta el desenvolupament de tecnologies més eficients energèticament,
+                            la creació de plataformes educatives digitals i la innovació en intel·ligència artificial per optimitzar
+                            processos.
+                        </p>
+                    </span>
+                </div>
+                <hr />
                 <h2>Accions aplicables</h2>
-                <h3>Àmbit professional</h3>
+                <h4>Àmbit professional</h4>
                 <ul>
                     <li>Desenvolupar programari optimitzat amb menor consum de recursos.</li>
-                    <li>Utilitzar serveis cloud amb certificacions ambientals.</li>
+                    <li>Utilitzar serveis <i>cloud</i> amb certificacions ambientals.</li>
                     <li>Aplicar bones pràctiques de ciberseguretat i protecció de dades.</li>
                 </ul>
-                <h3>Àmbit personal</h3>
+                <h4>Àmbit personal</h4>
                 <ul>
                     <li>Reduir el consum energètic dels dispositius.</li>
                     <li>Reciclar equips electrònics.</li>
@@ -199,6 +231,7 @@
             </div>
             <div id="part-4" class="section">
                 <h1>Economia circular i ecodisseny</h1>
+                <hr />
                 <h2>Model actual de producció i consum</h2>
                 <p>
                     El model actual es basa en un sistema lineal en el qual els recursos naturals s’extreuen, es
@@ -208,7 +241,8 @@
                     Aquest sistema genera una gran quantitat de residus i provoca un ús intensiu de recursos naturals i
                     energia, fet que el converteix en un model poc sostenible a llarg termini.
                 </p>
-                <h2>Economia verda i circular</h2>
+                <hr />
+                <h2>Economia <span style="color:green">verda</span> i <span id="spin">circular</span></h2>
                 <p>
                     L’economia verda busca compatibilitzar el desenvolupament econòmic amb la protecció del medi ambient
                     mitjançant l’ús eficient dels recursos naturals.
@@ -217,18 +251,21 @@
                     L’economia circular proposa mantenir els materials i productes dins del sistema econòmic durant el
                     màxim temps possible mitjançant la reutilització, la reparació i el reciclatge.
                 </p>
+                <hr />
                 <h2>Comparació amb el model clàssic</h2>
                 <p>El model lineal segueix el procés: <b>extreure → produir → consumir → llençar</b>.</p>
                 <p>
                     En canvi, el model circular busca <b>reduir, reutilitzar, reparar i reciclar</b> els materials per
                     disminuir la contaminació i aprofitar millor els recursos.
                 </p>
+                <hr />
                 <h2>Proposta de producte responsable</h2>
                 <p>
                     Es proposa una motxilla sostenible fabricada amb materials reciclats, especialment plàstic
                     recuperat. El producte està dissenyat per tenir una llarga durabilitat i facilitar la reparació en
                     cas de deteriorament.
                 </p>
+                <hr />
                 <h2>Principis d’ecodisseny</h2>
                 <ul>
                     <li>Ús de materials reciclats.</li>
@@ -236,11 +273,13 @@
                     <li>Reducció de materials innecessaris.</li>
                     <li>Embalatge biodegradable.</li>
                 </ul>
+                <hr />
                 <h2>Anàlisi del cicle de vida</h2>
                 <p>
                     El cicle de vida del producte inclou les fases d’obtenció de materials, producció, distribució, ús i
                     reciclatge final. Aquest procés permet identificar punts de millora per reduir l’impacte ambiental.
                 </p>
+                <hr />
                 <h2>Processos sostenibles aplicats</h2>
                 <ul>
                     <li>Ús de materials reciclats.</li>
@@ -251,6 +290,7 @@
             </div>
             <div id="part-5" class="section">
                 <h1>Activitats sostenibles</h1>
+                <hr />
                 <h2>Avaluació de l’impacte</h2>
                 <p>
                     Les activitats personals i professionals tenen un impacte directe sobre el medi ambient. El consum
@@ -261,6 +301,7 @@
                     En l’àmbit professional, l’ús d’equipament tecnològic i la generació de residus electrònics també
                     tenen un impacte ambiental important.
                 </p>
+                <hr />
                 <h2>Estratègies sostenibles</h2>
                 <ul>
                     <li>Millorar l’eficiència energètica.</li>
@@ -269,12 +310,14 @@
                     <li>Fomentar el reciclatge.</li>
                     <li>Reduir productes d’un sol ús.</li>
                 </ul>
+                <hr />
                 <h2>Normativa ambiental</h2>
                 <p>
                     La sostenibilitat està regulada per diferents directives europees sobre gestió de residus i economia
                     circular. També destaquen els Objectius de Desenvolupament Sostenible impulsats per les Nacions
                     Unides.
                 </p>
+                <hr />
                 <h2>Aplicació pràctica dins del projecte</h2>
                 <p>
                     En aquesta aplicació es promou la conscienciació ambiental mitjançant informació sobre
@@ -282,6 +325,10 @@
                     reducció del consum energètic.
                 </p>
             </div>
+            <footer>
+                Kiran ~ Yolanda ~ Iván
+                <br>♥
+            </footer>
         </main>
         <script src="src/script.js"></script>
     </body>
