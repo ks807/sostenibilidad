@@ -170,7 +170,7 @@ ul {
     padding: 0;
 
     li:before {
-      content: '✓';
+      content: '- ';
       margin: 1em;
     }
 }
