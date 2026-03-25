@@ -1,0 +1,26 @@
+{
+    "nom": "Microsoft Corporation",
+    "fundació": 1975,
+    "ubicació": "Washington, US",
+    "industria": "IT",
+    "CEO": "Satya Nadella",
+    "ISIN": "US5949181045",
+    "productes": [
+        "Windows",
+        "Microsoft 365",
+        "Teams",
+        "Xbox",
+        "Edge",
+        "Azure",
+        "Bing",
+        "LinkedIn",
+        "OneDrive",
+        "Outlook",
+        "GitHub"
+    ],
+    "treballadors": 228000,
+    "ingresos": 281700000000,
+    "benefici económic": 128500000000,
+    "benefici net": 101800000000,
+    "web": "https//www.microsoft.com"
+}
