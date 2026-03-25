@@ -16,8 +16,8 @@
         <a href="#" id="a-part-2" onclick="changeSection(this.id)">Impacte</a>
         <a href="#" id="a-part-6" onclick="changeSection(this.id)"> Reptes </a>
 
-        <a href="#" id="a-part-3" onclick="changeSection(this.id)">Economia Circular</a>
-        <a href="#" id="a-part-4" onclick="changeSection(this.id)">El meu Perfi</a>
+        <a href="#" id="a-part-3" onclick="changeSection(this.id)">Professional</a>
+        <a href="#" id="a-part-4" onclick="changeSection(this.id)">Economia Circular</a>
         <a href="#" id="a-part-5" onclick="changeSection(this.id)"> Activitats sostenibles</a>
         <a href="#" id="a-part-7" onclick="changeSection(this.id)">Pla de Sostenibilitat</a>
 
@@ -353,18 +353,13 @@
             <hr />
             <h2>Proposta de producte responsable</h2>
             <p>
-                Es proposa una motxilla sostenible fabricada amb materials reciclats, especialment plàstic
-                recuperat. El producte està dissenyat per tenir una llarga durabilitat i facilitar la reparació en
-                cas de deteriorament.
+                Com a proposta de producte responsable es planteja la creació d’una motxilla sostenible fabricada amb materials reciclats, especialment plàstic recuperat. Aquest producte està dissenyat amb l’objectiu de tenir una llarga durabilitat i de poder ser reparat fàcilment en cas de deteriorament. A més, el seu embalatge està fabricat amb materials biodegradables per reduir l’impacte ambiental. Aquest tipus de producte contribueix a reduir la quantitat de residus plàstics i promou un model de consum més responsable.
+
             </p>
             <hr />
             <h2>Principis d’ecodisseny</h2>
-            <ul>
-                <li>Ús de materials reciclats.</li>
-                <li>Disseny modular per facilitar la reparació.</li>
-                <li>Reducció de materials innecessaris.</li>
-                <li>Embalatge biodegradable.</li>
-            </ul>
+            <p>L’ecodisseny és una estratègia que consisteix a dissenyar productes tenint en compte el seu impacte ambiental durant tot el seu cicle de vida. En aquest projecte s’apliquen principis que busquen reduir la quantitat de materials utilitzats i fomentar l’ús de materials reciclats. També es té en compte la facilitat de reparació del producte i la possibilitat de substituir algunes peces sense haver de canviar tot el producte. A més, el disseny inclou l’ús d’embalatges ecològics que generen menys residus.
+</p>
             <hr />
             <h2>Anàlisi del cicle de vida</h2>
             <p>
@@ -373,12 +368,10 @@
             </p>
             <hr />
             <h2>Processos sostenibles aplicats</h2>
-            <ul>
-                <li>Ús de materials reciclats.</li>
-                <li>Reducció de residus en producció.</li>
-                <li>Utilització d’energia renovable.</li>
-                <li>Optimització del transport.</li>
-            </ul>
+            <p>L’anàlisi del cicle de vida del producte permet estudiar totes les etapes que formen part de la seva existència, des de l’obtenció dels materials fins al final de la seva vida útil. En aquest cas, el procés comença amb l’ús de materials reciclats per reduir l’extracció de recursos naturals. Durant la fase de producció es prioritza l’ús d’energia renovable sempre que sigui possible. En la fase de distribució es busca optimitzar el transport per reduir emissions contaminants. Durant l’etapa d’ús es promou la durabilitat del producte i la seva possible reparació. Finalment, quan el producte arriba al final de la seva vida útil, els materials poden ser reciclats per tornar a utilitzar-se en nous processos productius.</p>
+            <h2>processos sostenibles aplicats</h2>
+            <p>En aquest projecte s’apliquen diferents processos sostenibles orientats a reduir l’impacte ambiental. Entre aquests processos es troben l’ús de materials reciclats en la fabricació del producte, la reducció de residus durant el procés de producció, la utilització d’energia renovable sempre que sigui possible i l’optimització del transport per disminuir les emissions contaminants associades a la distribució del producte.
+</p>
         </div>
         <div id="part-5" class="section">
             <h1>Activitats sostenibles</h1>
@@ -551,92 +544,52 @@
         
         </div>
         <div id="part-7" class="section">
-            <h1>Pla de Sostenibilitat (RA6)</h1>
-            <hr />
+                <h1> Calculador </h1>
+    <hr />
+    
+    <div class="calculador-ra6">
+        <h2>Calculador Indicadors ASG Microsoft 2030</h2>
+        <p><i>Selecciona un indicador i calcula el seu estat segons els objectius RA6</i></p>
+        
+        <div class="select-container">
+            <select id="indicadorSelect" onchange="cambiarIndicador()">
+                <option value="">Selecciona indicador ASG...</option>
+                <option value="pue">PUE (Eficiència Energètica)</option>
+                <option value="reciclaje">Tasa Reciclatge Hardware</option>
+                <option value="brecha">Bretxa Salarial Gènere</option>
+                <option value="accesibilidad">Accessibilitat Producte</option>
+                <option value="diversidad">Diversitat Consell</option>
+                <option value="investigacion">Inversió I+D Verd</option>
+            </select>
+        </div>
 
-            <div id="grups-interes">
-                <h2>Grups d’interès</h2>
-                <p>El projecte té en compte diversos grups d’interès que poden veure’s afectats per les activitats desenvolupades. Entre aquests grups es troben:</p>
-                <ul>
-                    <li><strong>Clients:</strong> Usuaris del producte o servei.</li>
-                    <li><strong>Treballadors:</strong> Persones involucrades en el desenvolupament del projecte.</li>
-                    <li><strong>Proveïdors:</strong> Empreses que proporcionen materials o serveis.</li>
-                    <li><strong>Comunitat local:</strong> Àrea geogràfica afectada per les activitats de l’organització.</li>
-                    <li><strong>Administracions públiques:</strong> Entitats reguladores del sector i les lleis mediambientals.</li>
-                    <li><strong>Medi ambient:</strong> Un element clau a protegir davant l'impacte de les activitats de l'organització.</li>
-                </ul>
+        <div id="inputsContainer" class="inputs"></div>
+        <button class="calculate-btn" onclick="calcularRA6()" id="btnCalcular" style="display: none;">
+            CALCULAR SEMÀFOR 
+        </button>
+        
+        <div id="semaforoRA6" class="semaforo-ra6" style="display: none;">
+            <div class="semaforo-circle" id="semaforoIcon">✅</div>
+            <div class="semaforo-info">
+                <h3 id="indicadorNombre"></h3>
+                <div class="semaforo-status" id="estadoTexto">Objectiu Complert</div>
+                <div class="valor-resultado" id="valorResultado"></div>
+                <div class="rango-info" id="rangoInfo"></div>
+                <div id="formulaMostrada" class="formula"></div>
+                <div id="accionesRojo" class="acciones-rojo"></div>
             </div>
+        </div>
+    </div>
 
-            <div id="aspectes-asg">
-                <h2>Aspectes ASG Materials</h2>
-                <p>Els aspectes ASG fan referència als factors ambientals, socials i de governança que influeixen en la sostenibilitat d’una organització:</p>
-                <h3>Aspectes Ambientals</h3>
-                <ul>
-                    <li>Consum d’energia.</li>
-                    <li>Emissions de diòxid de carboni.</li>
-                    <li>Gestió de residus.</li>
-                </ul>
-                <h3>Aspectes Socials</h3>
-                <ul>
-                    <li>Condicions laborals.</li>
-                    <li>Igualtat d’oportunitats.</li>
-                    <li>Impacte de les activitats sobre la societat.</li>
-                </ul>
-                <h3>Aspectes de Governança</h3>
-                <ul>
-                    <li>Transparència en la gestió.</li>
-                    <li>Compliment de la normativa.</li>
-                    <li>Aplicació de principis ètics en la presa de decisions.</li>
-                </ul>
-            </div>
+    <hr />
+    
 
-            <div id="accions-concretes">
-                <h2>Accions concretes</h2>
-                <p>El projecte estableix diverses accions orientades a millorar la sostenibilitat de les seves activitats:</p>
-                <ul>
-                    <li>Reducció del consum energètic.</li>
-                    <li>Utilització de materials reciclats en la producció.</li>
-                    <li>Implementació de sistemes de reciclatge.</li>
-                    <li>Promoció de formes de transport més sostenibles.</li>
-                    <li>Formació dels treballadors en temes relacionats amb la sostenibilitat.</li>
-                    <li>Reducció progressiva de les emissions de CO₂.</li>
-                </ul>
-            </div>
+    
+</div>
+           
 
-            <div id="metrics">
-                <h2>Mètriques d’avaluació</h2>
-                <p>Per avaluar l’eficàcia d’aquestes accions es defineixen diversos indicadors de sostenibilitat:</p>
-                <ul>
-                    <li>Consum energètic anual (kWh).</li>
-                    <li>Emissions de CO₂ generades (tonelades).</li>
-                    <li>Percentatge de materials reciclats utilitzats.</li>
-                    <li>Quantitat de residus produïts (kg).</li>
-                    <li>Percentatge de residus reciclats.</li>
-                    <li>Consum d’aigua (litres).</li>
-                    <li>Nombre d’activitats de formació en sostenibilitat.</li>
-                    <li>Percentatge de proveïdors que compleixen criteris ambientals.</li>
-                </ul>
-            </div>
 
-            <div id="calcul-indicadors">
-                <h2>Indicadors calculats automàticament</h2>
-                <p>Alguns dels indicadors es poden calcular automàticament dins de l’aplicació:</p>
-                <ul>
-                    <li><strong>Percentatge de reciclatge:</strong> Es calcula dividint la quantitat de material reciclat entre el total de residus generats i multiplicant per cent.</li>
-                    <li><strong>Emissions de CO₂:</strong> Es calcula segons el consum energètic de l’organització i el tipus d’energia utilitzada (renovable o no).</li>
-                </ul>
-            </div>
-
-            <div id="informe-final">
-                <h2>Informe Final de Sostenibilitat</h2>
-                <p>L’aplicació genera un informe final que inclou tota la informació relacionada amb les accions aplicades i els resultats obtinguts dels indicadors definits. Aquest informe inclou:</p>
-                <ul>
-                    <li>Descripció del projecte.</li>
-                    <li>Anàlisi dels resultats obtinguts.</li>
-                    <li>Valoració de l’impacte ambiental reduït gràcies a les mesures implementades.</li>
-                    <li>Opció d’exportar l’informe en format digital (PDF) o imprimir-lo per a la seva difusió i anàlisi.</li>
-                </ul>
-            </div>
+    
         </div>
 
         <footer>
