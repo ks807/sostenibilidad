@@ -127,6 +127,11 @@ label {
     margin: 1em;
     margin-left: calc(var(--sidebar-size) / 3);
 
+    &:hover {
+        scale: 1.1;
+        transition: 100ms;
+    }
+
     input {
         opacity: 0;
         width: 0;
