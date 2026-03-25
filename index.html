@@ -639,11 +639,39 @@
         
         </div>
         <div id="part-7" class="section">
-            <h1>Pla de Sostenibilitat</h1>
+            <h1> Calculador </h1>
             <hr />
-            <p>aquí van las calculadoras y tal (consultar documento)</p>
+            <div class="calculador-ra6">
+                <h2>Calculador Indicadors ASG Microsoft 2030</h2>
+                <p><i>Selecciona un indicador i calcula el seu estat segons els objectius RA6</i></p>
+                <div class="select-container">
+                    <select id="indicadorSelect" onchange="changeIndicator()">
+                        <option value="">Selecciona indicador ASG...</option>
+                        <option value="pue">PUE (Eficiència Energètica)</option>
+                        <option value="reciclaje">Tasa Reciclatge Hardware</option>
+                        <option value="brecha">Bretxa Salarial Gènere</option>
+                        <option value="accesibilidad">Accessibilitat Producte</option>
+                        <option value="diversidad">Diversitat Consell</option>
+                        <option value="investigacion">Inversió I+D Verd</option>
+                    </select>
+                </div>
+                <div id="inputsContainer" class="inputs"></div>
+                <button class="calculate-btn" onclick="calculateIndicator()" id="btnCalcular" style="display: none;">
+                    CALCULAR SEMÀFOR 
+                </button>
+                <div id="semaforoRA6" class="semaforo-ra6" style="display: none;">
+                    <div class="semaforo-circle" id="semaforoIcon"></div>
+                    <div class="semaforo-info">
+                        <h3 id="indicadorNombre"></h3>
+                        <div class="semaforo-status" id="estadoTexto">Objectiu Complert</div>
+                        <div class="valor-resultado" id="valorResultado"></div>
+                        <div class="rango-info" id="rangoInfo"></div>
+                        <div id="formulaMostrada" class="formula"></div>
+                        <div id="accionesRojo" class="acciones-rojo"></div>
+                    </div>
+                </div>
+            </div>
         </div>
-
         <footer>
             Kiran ~ Yolanda ~ Iván
             <br>♥

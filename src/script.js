@@ -17,9 +17,10 @@ changeSection(localStorage.getItem("page") || "part-1");
 changeODS(localStorage.getItem("ods") || "ODS4");
 document.getElementById("dark").checked = localStorage.getItem('theme') === 'true' || false;
 
+// ra6
+// Adrian... lo siento mucho. de corazón.
 
-
-const indicadoresRA6 = {
+const indicators = {
     pue: {
         nombre: "PUE (Eficiència Energètica)",
         formula: "Energia Total / Energia IT",
@@ -88,7 +89,7 @@ const indicadoresRA6 = {
     }
 };
 
-function cambiarIndicador() {
+function changeIndicator() {
     const select = document.getElementById('indicadorSelect');
     const container = document.getElementById('inputsContainer');
     const btn = document.getElementById('btnCalcular');
@@ -102,13 +103,13 @@ function cambiarIndicador() {
         return;
     }
 
-    const indicador = indicadoresRA6[select.value];
-    generarInputs(indicador);
+    const indicador = indicators[select.value];
+    doInputs(indicador);
     container.style.display = 'flex';
     btn.style.display = 'block';
 }
 
-function generarInputs(indicador) {
+function doInputs(indicador) {
     const container = document.getElementById('inputsContainer');
     container.innerHTML = '';
     
@@ -120,27 +121,27 @@ function generarInputs(indicador) {
     });
 }
 
-function evaluarSemaforoRA6(valor, tipo) {
-    const indicador = indicadoresRA6[tipo];
+function evalLight(valor, tipo) {
+    const indicador = indicators[tipo];
     const umbrales = indicador.umbrales;
     let color, icono, estado, rango;
 
     if (tipo === 'pue') {
-        if (valor < umbrales.verde) { color = 'verde'; icono = '✅'; estado = 'Objectiu Complert'; rango = '< 1.15 (Excel·lent)'; }
-        else if (valor <= umbrales.amarillo) { color = 'amarillo'; icono = '⚠️'; estado = 'En Progrés'; rango = '1.15-1.40 (Acceptable)'; }
-        else { color = 'rojo'; icono = '🚨'; estado = 'Risc Crític'; rango = '> 1.40 (CRÍTIC)'; }
+        if (valor < umbrales.verde) { color = 'verde'; estado = 'Objectiu Complert'; rango = '< 1.15 (Excel·lent)'; }
+        else if (valor <= umbrales.amarillo) { color = 'amarillo'; estado = 'En Progrés'; rango = '1.15-1.40 (Acceptable)'; }
+        else { color = 'rojo'; estado = 'Risc Crític'; rango = '> 1.40 (CRÍTIC)'; }
     } else {
-        if (valor > umbrales.verde) { color = 'verde'; icono = '✅'; estado = 'Objectiu Complert'; rango = `> ${umbrales.verde}% (Excel·lent)`; }
-        else if (valor >= umbrales.amarillo) { color = 'amarillo'; icono = '⚠️'; estado = 'En Progrés'; rango = `${umbrales.amarillo}-${umbrales.verde}% (Acceptable)`; }
-        else { color = 'rojo'; icono = '🚨'; estado = 'Risc Crític'; rango = `< ${umbrales.amarillo}% (CRÍTIC)`; }
+        if (valor > umbrales.verde) { color = 'verde'; estado = 'Objectiu Complert'; rango = `> ${umbrales.verde}% (Excel·lent)`; }
+        else if (valor >= umbrales.amarillo) { color = 'amarillo'; estado = 'En Progrés'; rango = `${umbrales.amarillo}-${umbrales.verde}% (Acceptable)`; }
+        else { color = 'rojo'; estado = 'Risc Crític'; rango = `< ${umbrales.amarillo}% (CRÍTIC)`; }
     }
     return { color, icono, estado, rango };
 }
 
-function calcularRA6() {
+function calculateIndicator() {
     const select = document.getElementById('indicadorSelect');
     const tipo = select.value;
-    const indicador = indicadoresRA6[tipo];
+    const indicador = indicators[tipo];
     
     const valores = {};
     indicador.inputs.forEach(input => {
@@ -149,18 +150,17 @@ function calcularRA6() {
 
     for (let key in valores) {
         if (isNaN(valores[key]) || valores[key] <= 0) {
-            alert('⚠️ Completa tots els camps amb valors vàlids');
+            alert('Completa tots els camps amb valors vàlids!!');
             return;
         }
     }
 
     const resultado = indicador.calcular(...Object.values(valores));
-    const semaforoData = evaluarSemaforoRA6(resultado, tipo);
+    const semaforoData = evalLight(resultado, tipo);
     
     // Actualizar semáforo
     const semaforo = document.getElementById('semaforoRA6');
     semaforo.className = `semaforo-ra6 ${semaforoData.color}`;
-    document.getElementById('semaforoIcon').textContent = semaforoData.icono;
     document.getElementById('indicadorNombre').textContent = indicador.nombre;
     document.getElementById('estadoTexto').textContent = semaforoData.estado;
     document.getElementById('valorResultado').textContent = 
